@@ -1,0 +1,67 @@
+
+
+
+k8s
+
+	-  master node
+	- single or multiple worker nodes
+			- single or multiple pods
+===================
+
+single pods   
+		- single container or multiple containers
+
+=========================
+
+pod has ip , container has no ip
+
+=================================
+
+objects
+
+pod
+deployment
+replicaset
+statefulset
+daemon set
+================
+
+kubectl get pods			.. list of pods
+
+kubectl get pods -o wide   .. list of pods with extra ip
+
+kubectl get nodes    --- list of nodes
+
+kubectl get nodes -o wide			.. extra info with list of nodes
+
+kubectl describe pod pod-name	  ....... info regarding specific pods	
+
+kubectl logs -f pod-name	:    view logs of pod
+
+kubectl logs -f pod-name -c container-name 			:    view logs of pod with specific container
+
+kubectl exec -it pod-name -- /bin/bash		: enter in a container of a pod (when there is single container in pod)
+
+kubectl exec -it pod-name -c container-name -- /bin/bash		: enter in specific container of a pod (when there are multiple container in pod)
+
+----------------------------
+kubectl delete -f manifest-file-xyz.yaml	:  delete pod using particular manifest file
+
+kubectl delete pod pod-name	: delete pod using command
+
+==============================================================
+
+         deployment objects   (upgradation/ rollback /autoscaling)
+						|
+				replicaset      (  2  )
+				        |
+                      pods
+                         |	
+                    Containers						 
+					
+					
+1. single container run
+2. multiple containers run
+3. check logs of containers single or multiple
+4.  container delete  2 ways :
+5:  how to enter in container

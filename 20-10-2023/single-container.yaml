@@ -1,0 +1,9 @@
+kind: Pod                              
+apiVersion: v1                     
+metadata:                           
+  name: atul-test-pod                 
+spec:                                    
+  containers:                      
+    - name: sangam                     
+      image: ubuntu              
+      command: ["/bin/bash", "-c", "while true; do echo Hello-vishalk17; sleep 5 ; done"]
