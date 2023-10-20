@@ -51,13 +51,13 @@ kubectl delete pod pod-name	: delete pod using command
 
 ==============================================================
 
-         deployment objects   (upgradation/ rollback /autoscaling)
-						|
-				replicaset      (  2  )
-				        |
-                      pods
-                         |	
-                    Containers						 
+      ( deployment ) objects   (upgradation/ rollback /autoscaling)
+	     |
+	replicaset      (  2  )
+	     |
+           pods
+             |	
+        Containers						 
 					
 					
 1. single container run
